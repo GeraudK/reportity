@@ -12,6 +12,10 @@ on:
   release:
     types: [published]
 
+environment:
+  name: testpypi
+  url: https://test.pypi.org/p/geraudd-reportify
+
 permissions:
   contents: read
   id-token: write
@@ -36,4 +40,4 @@ jobs:
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        repository-url: https://test.pypi.org/
+        repository-url: https://test.pypi.org/legacy/
