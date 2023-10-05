@@ -1,2 +1,2 @@
 __all__ = ['reportity']
-__version__ = "1.23.8"
+__version__ = "1.23.9"
