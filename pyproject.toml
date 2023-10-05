@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "reportity"
+name = "geraudd-reportity"
 version = "1.23.0"
 description = "this is the best package for reports"
 authors = [{ name = "Yonatan Faigenbaum", email = "fnatanoy@gmail.com"}]
