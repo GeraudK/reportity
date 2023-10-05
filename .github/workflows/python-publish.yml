@@ -9,6 +9,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      TWINE_USERNAME: __token__
+      TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
@@ -22,4 +26,4 @@ jobs:
     - name: Build package
       run: python -m build
     - name: Publish package
-      run: python -m twine upload --username __token__ --password "${TEST_PYPI_API_TOKEN}" --repository testpypi dist/*
+      run: python -m twine upload --repository testpypi dist/*
