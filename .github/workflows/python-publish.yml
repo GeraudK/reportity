@@ -12,10 +12,6 @@ on:
   release:
     types: [published]
 
-environment:
-  name: testpypi
-  url: https://test.pypi.org/p/geraudd-reportify
-
 permissions:
   contents: read
   id-token: write
@@ -24,6 +20,10 @@ jobs:
   deploy:
 
     runs-on: ubuntu-latest
+
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/geraudd-reportify
 
     steps:
     - uses: actions/checkout@v3
